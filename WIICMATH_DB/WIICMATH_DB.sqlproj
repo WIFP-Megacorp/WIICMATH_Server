@@ -58,10 +58,20 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Device.sql" />
     <Build Include="dbo\Tables\DeviceLog.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_Get.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_Update.sql" />
+    <Build Include="dbo\StoredProcedures\spDeviceLog_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spDeviceLog_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\spDeviceLog_GetDevice.sql" />
+    <Build Include="dbo\StoredProcedures\spDeviceLog_Delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="WIICMATH_DB.publish.xml" />
