@@ -1,4 +1,4 @@
-using APIclassLib;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,18 +15,6 @@ app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
-
-//Get the default settings for the device from the APIclassLib
-app.MapGet(pattern: "Api/Device/Settings", () => { return WIICMATHdevice.DefaultSettings; });
-
-//gets the device settings for the device with the given id
-//not implemented yet
-//app.MapGet(pattern: "Api/Device/Settings/{id}", (object id) => { return "Not implemented yet"; });
-
-//endpoint for device to post data readings
-app.MapPost(pattern: "Api/Device/Readings", (WIICMATHdevice device) => { return device; });
-
-
 
 
 //example
