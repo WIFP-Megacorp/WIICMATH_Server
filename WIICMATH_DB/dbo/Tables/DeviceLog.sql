@@ -5,5 +5,5 @@
 	[Timestamp] DATETIME NOT NULL, 
 	[Temperature] INT NOT NULL, 
 	[Humidity] INT NOT NULL,  
-	CONSTRAINT [FK_DeviceLog_Device_DeviceId] FOREIGN KEY ([DeviceId]) REFERENCES [dbo].[Device] ([Id])
+	CONSTRAINT [FK_DeviceLog_Device_DeviceId] FOREIGN KEY ([DeviceId]) REFERENCES [dbo].[Device] ([Id]) ON DELETE CASCADE
 )
