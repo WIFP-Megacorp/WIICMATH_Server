@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>WIICMATHDB</Name>
+    <Name>WIICMATH_DB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{c9b45899-b98f-4065-8631-9a970a99492d}</ProjectGuid>
@@ -61,5 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Device.sql" />
+    <Build Include="dbo\Tables\DeviceLog.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WIICMATH_DB.publish.xml" />
   </ItemGroup>
 </Project>
