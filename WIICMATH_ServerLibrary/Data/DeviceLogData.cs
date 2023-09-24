@@ -25,7 +25,7 @@ public class DeviceLogData : IDeviceLogData
 	//custom get with param ArdMac
 	public Task<IEnumerable<DeviceLogModel>> GetByDevice(string ArdMac) => _db.LoadData<DeviceLogModel, dynamic>("dbo.spDeviceLog_GetDevice", new { DeviceID = getDeviceId(ArdMac) });
 
-	public Task Insert(DeviceLogModel log) => _db.SaveData("dbo.spDeviceLog_Insert", new { log.DeviceId, log.Temperature, log.Humidity, log.TimeStamp });
+	public Task Insert(DeviceLogModel log) => _db.SaveData("dbo.spDeviceLog_Insert", new { log.DeviceId, log.Temperature, log.Humidity});
 
 	public Task Delete(int id) => _db.SaveData("dbo.spDeviceLog_Delete", new { Id = id });
 }

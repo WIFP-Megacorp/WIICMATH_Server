@@ -1,16 +1,17 @@
 ﻿CREATE PROCEDURE [dbo].[spDevice_Update]
 	@Id int,
 	@ArdMAC nvarchar(50),
-	@minTemp int,
-	@maxTemp int,
-	@minHum int,
-	@maxHum int,
+	@name nvarchar(50),
+	@minThresholdTemp int,
+	@maxThresholdTemp int,
+	@minThresholdHum int,
+	@maxThresholdHum int,
 	@sound tinyint,
 	@light tinyint
 AS
 begin
 	update dbo.Device
-	set ArdMAC = @ArdMAC, minTemp = @minTemp, maxTemp = @maxTemp, minHum = @minHum, maxHum = @maxHum, sound = @sound, light = @light
+	set ArdMAC = @ArdMAC, [name]= @name , minThresholdTemp = @minThresholdTemp, maxThresholdTemp = @maxThresholdTemp, minThresholdHum = @minThresholdHum, maxThresholdHum = @maxThresholdHum, sound = @sound, light = @light
 	where Id = @Id;
 end
 

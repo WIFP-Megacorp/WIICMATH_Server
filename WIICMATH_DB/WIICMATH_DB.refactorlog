@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="16705e18-ecf1-4367-8940-78787afdb38f" ChangeDateTime="09/24/2023 14:10:12">
+    <Property Name="ElementName" Value="[dbo].[Device].[minTemp]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="minThresholdTemp" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7029ae76-a21e-4b04-97ee-79c022c9aa44" ChangeDateTime="09/24/2023 14:10:15">
+    <Property Name="ElementName" Value="[dbo].[Device].[maxTemp]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="maxThresholdTemp" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1dd2da73-0770-4e83-b5a0-73c18ee2e7f2" ChangeDateTime="09/24/2023 14:10:19">
+    <Property Name="ElementName" Value="[dbo].[Device].[minHum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="minThresholdHum" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9d09b69b-6040-4faf-a872-11c06a00df73" ChangeDateTime="09/24/2023 14:10:34">
+    <Property Name="ElementName" Value="[dbo].[Device].[maxHum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Device]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="maxThresholdHum" />
+  </Operation>
+</Operations>
