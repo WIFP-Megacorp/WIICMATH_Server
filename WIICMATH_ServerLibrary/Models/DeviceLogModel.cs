@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WIICMATH_ServerLibrary.Models;
+﻿namespace WIICMATH_ServerLibrary.Models;
 
 public class DeviceLogModel
 {

@@ -25,7 +25,8 @@ public class DeviceData : IDeviceData
 			).FirstOrDefault();
 		if (queryResult == null)
 		{
-			await InsertDevice(ArdMac);
+			DeviceModel nDevice = new DeviceModel(ArdMac);
+			await InsertDevice(nDevice);
 
 			queryResult = (await _db.LoadData<DeviceModel, dynamic>(
 			"dbo.spDevice_Get", new { ArdMAC = ArdMac })
@@ -39,10 +40,8 @@ public class DeviceData : IDeviceData
 
 	public Task DeleteDevice(int id) => _db.SaveData("dbo.spDevice_Delete", new { Id = id });
 
-	public async Task InsertDevice(string ardmac)
+	public async Task InsertDevice(DeviceModel nDevice)
 	{
-		//creating new
-		DeviceModel nDevice = new(ardmac);
 		await _db.SaveData("dbo.spDevice_Insert", new { nDevice.ArdMAC, nDevice.maxHum, nDevice.minHum, nDevice.minTemp, nDevice.maxTemp, nDevice.light, nDevice.sound });
 	}
 }
