@@ -16,4 +16,8 @@ public class DeviceModel
 	{
 		ArdMAC = ArdMac;
 	}
+    public DeviceModel()
+    {
+        
+    }
 }

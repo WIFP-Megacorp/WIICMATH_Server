@@ -38,7 +38,7 @@ public class DeviceData : IDeviceData
 
 	public Task UpdateDevice(DeviceModel device) => _db.SaveData("dbo.spDevice_Update", device);
 
-	public Task DeleteDevice(int id) => _db.SaveData("dbo.spDevice_Delete", new { Id = id });
+	public Task DeleteDevice(int? id, string? ardmac) => _db.SaveData("dbo.spDevice_Delete", new { Id = id, ArdMAC = ardmac});
 
 	public async Task InsertDevice(DeviceModel nDevice)
 	{
