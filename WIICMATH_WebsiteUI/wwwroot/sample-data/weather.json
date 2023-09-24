@@ -1,0 +1,86 @@
+﻿[
+    {
+        "date": "2023-09-18",
+        "temperatureC": -12,
+        "humidity": 1,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-19",
+        "temperatureC": -13,
+        "humidity": 5,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-20",
+        "temperatureC": -1,
+        "humidity": 10,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-21",
+        "temperatureC": 3,
+        "humidity": 12,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-22",
+        "temperatureC": 8,
+        "humidity": 26,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-23",
+        "temperatureC": 15,
+        "humidity": 12,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-24",
+        "temperatureC": 8,
+        "humidity": 20,
+        "summary": "Det er litt varmt gitt"
+    },
+    {
+        "date": "2023-09-25",
+        "temperatureC": 14,
+        "humidity": 17,
+        "summary": "Bracing"
+    },
+    {
+        "date": "2023-09-26",
+        "temperatureC": -13,
+        "humidity": 23,
+        "summary": "Freezing"
+    },
+    {
+        "date": "2023-09-27",
+        "temperatureC": -16,
+        "humidity": 20,
+        "summary": "Balmy"
+    },
+    {
+        "date": "2023-09-28",
+        "temperatureC": -16,
+        "humidity": 14,
+        "summary": "Balmy"
+    },
+    {
+        "date": "2023-09-29",
+        "temperatureC": -16,
+        "humidity": 10,
+        "summary": "Balmy"
+    },
+    {
+        "date": "2023-09-30",
+        "temperatureC": -16,
+        "humidity": 10,
+        "summary": "Balmy"
+    },
+    {
+        "date": "2023-10-01",
+        "temperatureC": -15,
+        "humidity": 25,
+        "summary": "Balmy"
+    }
+]
