@@ -77,4 +77,7 @@
   <ItemGroup>
     <None Include="WIICMATH_DB.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="WIICMATH_DB.refactorlog" />
+  </ItemGroup>
 </Project>
