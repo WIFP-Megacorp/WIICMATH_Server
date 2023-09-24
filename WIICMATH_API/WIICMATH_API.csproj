@@ -13,4 +13,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WIICMATH_ServerLibrary\WIICMATH_ServerLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
