@@ -72,6 +72,7 @@
     <Build Include="dbo\StoredProcedures\spDeviceLog_GetAll.sql" />
     <Build Include="dbo\StoredProcedures\spDeviceLog_GetDevice.sql" />
     <Build Include="dbo\StoredProcedures\spDeviceLog_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\spDevice_GetId.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="WIICMATH_DB.publish.xml" />
