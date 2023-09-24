@@ -42,6 +42,6 @@ public class DeviceData : IDeviceData
 
 	public async Task InsertDevice(DeviceModel nDevice)
 	{
-		await _db.SaveData("dbo.spDevice_Insert", new { nDevice.ArdMAC, nDevice.maxHum, nDevice.minHum, nDevice.minTemp, nDevice.maxTemp, nDevice.light, nDevice.sound });
+		await _db.SaveData("dbo.spDevice_Insert", new { nDevice.ArdMAC, nDevice.name, nDevice.maxThresholdHum, nDevice.minThresholdHum, nDevice.minThresholdTemp, nDevice.maxThresholdTemp, nDevice.light, nDevice.sound });
 	}
 }

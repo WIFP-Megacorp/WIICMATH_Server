@@ -1,13 +1,14 @@
 ﻿CREATE PROCEDURE [dbo].[spDevice_Insert]
 	@ArdMAC NVARCHAR(50),
-	@minTemp INT,
-	@maxTemp INT,
-	@minHum INT,
-	@maxHum INT,
+	@name NVARCHAR(50),
+	@minThresholdTemp INT,
+	@maxThresholdTemp INT,
+	@minThresholdHum INT,
+	@maxThresholdHum INT,
 	@sound TINYINT,
 	@light TINYINT
 AS
 begin
-	insert into dbo.Device (ArdMAC, minTemp, maxTemp, minHum, maxHum, sound, light)
-	values (@ArdMAC, @minTemp, @maxTemp, @minHum, @maxHum, @sound, @light);
+	insert into dbo.Device (ArdMAC,[name], minThresholdTemp, maxThresholdTemp, minThresholdHum, maxThresholdHum, sound, light)
+	values (@ArdMAC, @name , @minThresholdTemp, @maxThresholdTemp, @minThresholdHum, @maxThresholdHum, @sound, @light);
 end
