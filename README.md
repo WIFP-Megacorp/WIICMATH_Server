@@ -16,7 +16,7 @@ How to make the api project work locally(Visual Studio):
 
 1. Open the solution in Visual Studio.
 2. right-click the WIICMATH_API, make sure it is set as startup projeckt
-3. right-click the WIICMATH_API, click publish. In the popup:
+3. right-click the WIICMATH_DB, click publish. In the popup:
 	- click edit
 	- click browse
 	- select local
