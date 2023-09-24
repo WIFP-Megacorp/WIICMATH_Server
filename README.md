@@ -31,7 +31,8 @@ How to make the api project work locally(Visual Studio):
 6.Right-click the DB and click properties, find the connetion string.	
 7.Open the WIICMATH_API project, open the appsettings.json file.
 8.Replace the connection string with the one you found in step 6.
-	- The connection string should look something like this: "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WIICMATH_DB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+	- The connection string should look something like this:
+ 	- "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WIICMATH_DB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
 	- Make sure there are no spaces in (TrustServerCertificate ,ApplicationIntent and MultiSubnetFailover)	
 9. Save the appsettings.json
 1. Run the project
