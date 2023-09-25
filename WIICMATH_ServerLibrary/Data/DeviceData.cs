@@ -20,7 +20,7 @@ public class DeviceData : IDeviceData
 	//if a new DeviceModel is created, it returns the new device with default values
 	public async Task<DeviceModel?> GetDevice(int? id, string? ArdMac)
 	{
-		if (id == null && ArdMac == null) throw new ArgumentNullException(nameof(id), "id and ArdMac can't be null at the same time");
+		if (id == null && ArdMac == null) throw new ArgumentNullException( string.Join("' '",nameof(id), nameof(ArdMac)), "id and ArdMac can't be null at the same time");
 		var queryResult = (await _db.LoadData<DeviceModel, dynamic>(
 			"dbo.spDevice_Get", new {Id = id, ArdMAC = ArdMac })
 			).FirstOrDefault();
