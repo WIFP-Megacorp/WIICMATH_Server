@@ -22,7 +22,7 @@ public class DeviceData : IDeviceData
 	{
 		if (id == null && ArdMac == null) throw new ArgumentNullException(nameof(id), "id and ArdMac can't be null at the same time");
 		var queryResult = (await _db.LoadData<DeviceModel, dynamic>(
-			"dbo.spDevice_Get", new { ArdMAC = ArdMac })
+			"dbo.spDevice_Get", new {Id = id, ArdMAC = ArdMac })
 			).FirstOrDefault();
 		if (queryResult == null && ArdMac != null)
 		{
@@ -30,7 +30,7 @@ public class DeviceData : IDeviceData
 			await InsertDevice(nDevice);
 			
 			queryResult = (await _db.LoadData<DeviceModel, dynamic>(
-			"dbo.spDevice_Get", new { ArdMAC = ArdMac })
+			"dbo.spDevice_Get", new { Id = id, ArdMAC = ArdMac })
 			).FirstOrDefault();
 
 		}
