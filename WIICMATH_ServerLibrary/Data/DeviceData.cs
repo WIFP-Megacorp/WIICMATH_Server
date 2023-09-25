@@ -18,17 +18,16 @@ public class DeviceData : IDeviceData
 	//custom get with param ArdMac
 	//creates a new DeviceModel if it doesn't exist
 	//if a new DeviceModel is created, it returns the new device with default values
-	public async Task<DeviceModel?> GetDevice(int? id, string? ArdMac)
+	public async Task<DeviceModel?> GetDevice(string ArdMac)
 	{
-		if (id == null && ArdMac == null) throw new ArgumentNullException(nameof(id), "id and ArdMac can't be null at the same time");
 		var queryResult = (await _db.LoadData<DeviceModel, dynamic>(
 			"dbo.spDevice_Get", new { ArdMAC = ArdMac })
 			).FirstOrDefault();
-		if (queryResult == null && ArdMac != null)
+		if (queryResult == null)
 		{
 			DeviceModel nDevice = new DeviceModel(ArdMac);
 			await InsertDevice(nDevice);
-			
+
 			queryResult = (await _db.LoadData<DeviceModel, dynamic>(
 			"dbo.spDevice_Get", new { ArdMAC = ArdMac })
 			).FirstOrDefault();
@@ -39,13 +38,8 @@ public class DeviceData : IDeviceData
 
 	public Task UpdateDevice(DeviceModel device) => _db.SaveData("dbo.spDevice_Update", device);
 
-	public Task DeleteDevice(int? id, string? ardmac)
-	{
-		if (id == null && ardmac == null) throw new ArgumentNullException(nameof(id), "id and ArdMac can't be null at the same time");
-		_db.SaveData("dbo.spDevice_Delete", new { Id = id, ArdMAC = ardmac });
-		//returnig that task is completed
-		return Task.CompletedTask;
-	}
+	public Task DeleteDevice(int? id, string? ardmac) => _db.SaveData("dbo.spDevice_Delete", new { Id = id, ArdMAC = ardmac});
+
 	public async Task InsertDevice(DeviceModel nDevice)
 	{
 		await _db.SaveData("dbo.spDevice_Insert", new { nDevice.ArdMAC, nDevice.name, nDevice.maxThresholdHum, nDevice.minThresholdHum, nDevice.minThresholdTemp, nDevice.maxThresholdTemp, nDevice.light, nDevice.sound });
