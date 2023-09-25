@@ -7,7 +7,7 @@ public static class Api
 		//All of my Api endpoint mapping
 		//Device endpoints
 		app.MapGet("/api/devices", GetDevices); //Get all devices
-		app.MapGet("/api/devices/{ArdMac}/{id}", GetDevice); //Get a device by its ArdMac
+		app.MapGet("/api/device/", GetDevice); //Get a device by its ArdMac
 		app.MapPost("/api/insertDevice", InsertDevice);
 		app.MapPost("/api/deleteDevice", DeleteDevice);
 		//DeviceLog endpoints
