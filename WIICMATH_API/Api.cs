@@ -31,11 +31,11 @@ public static class Api
 		}
 	}
 	//get with string parameter
-	private static async Task<IResult> GetDevice(IDeviceData data, string ArdMac)
+	private static async Task<IResult> GetDevice(IDeviceData data,int? id, string? ArdMac)
 	{
 		try
 		{
-			return Results.Ok(await data.GetDevice(ArdMac));
+			return Results.Ok(await data.GetDevice(id, ArdMac));
 		}
 		catch (Exception ex)
 		{
