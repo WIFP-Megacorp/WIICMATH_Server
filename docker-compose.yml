@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  wiicmath_api:
+    image: ${DOCKER_REGISTRY-}wiicmathapi
+    build:
+      context: .
+      dockerfile: WIICMATH_API/Dockerfile

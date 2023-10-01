@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["WIICMATH_API/WIICMATH_API.csproj", "WIICMATH_API/"]
+COPY ["WIICMATH_ServerLibrary/WIICMATH_ServerLibrary.csproj", "WIICMATH_ServerLibrary/"]
 RUN dotnet restore "WIICMATH_API/WIICMATH_API.csproj"
 COPY . .
 WORKDIR "/src/WIICMATH_API"
