@@ -22,6 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -45,6 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>False</RunSqlCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -59,6 +61,7 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedures" />
+    <Folder Include="Snapshots" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Device.sql" />
@@ -76,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="WIICMATH_DB.publish.xml" />
+    <None Include="Snapshots\WIICMATH_DB_20231001_16-51-29.dacpac" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="WIICMATH_DB.refactorlog" />

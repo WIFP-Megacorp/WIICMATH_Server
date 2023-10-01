@@ -1,8 +1,21 @@
 version: '3.4'
 
 services:
+  wiicmath_db:
+    container_name: wiicmathServer_db
+    image: ${DOCKER_REGISTRY-}wiicmathdb
+    build:
+      context: .
+      dockerfile: WIICMATH_DB/Dockerfile
+    ports:
+    - 8002:1433
   wiicmath_api:
+    container_name: wiicmathServer_api
     image: ${DOCKER_REGISTRY-}wiicmathapi
     build:
       context: .
       dockerfile: WIICMATH_API/Dockerfile
+    depends_on: 
+      - wiicmath_db
+    ports:
+    - 8001:80
