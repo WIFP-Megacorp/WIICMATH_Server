@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WIICMATH_ServerLibrary", "W
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WIICMATH_DB", "WIICMATH_DB\WIICMATH_DB.sqlproj", "{C9B45899-B98F-4065-8631-9A970A99492D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{0AECF39A-6434-4276-8CD4-58F358A72759}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BEA9C9DF-D41C-49EE-AC12-157A19F597A1}"
 EndProject
 Global
@@ -40,9 +38,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BEA9C9DF-D41C-49EE-AC12-157A19F597A1} = {0AECF39A-6434-4276-8CD4-58F358A72759}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B693E1E5-6D71-410B-8F94-03386F507F05}
