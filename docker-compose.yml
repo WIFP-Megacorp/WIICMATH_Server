@@ -1,0 +1,36 @@
+version: '3.4'
+networks:
+  wiicmathBackend:
+services:
+  wiicmath_db:
+    container_name: wiicmathServer_db
+    image: ${DOCKER_REGISTRY-}wiicmathdb
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=Pass!234
+    build:
+      context: ./DBservice
+      args:
+        DBNAME: WiicmathDB
+      dockerfile: ./Dockerfile
+    ports:
+        - 8003:1433
+    networks:
+        - wiicmathBackend
+  wiicmath_api:
+    container_name: wiicmathServer_api
+    image: ${DOCKER_REGISTRY-}wiicmathapi
+    build:
+      context: .
+      dockerfile: WIICMATH_API/Dockerfile
+    depends_on:
+        - wiicmath_db
+    environment:
+        - DB_HOST=wiicmath_db
+        - DB_NAME=WiicmathDB
+        - DB_PASS=Pass!234
+    ports:
+        - 8001:80
+        - 8002:443 
+    networks:
+        - wiicmathBackend
