@@ -8,13 +8,15 @@ public static class Api
 		//Device endpoints
 		app.MapGet("/api/devices", GetDevices); //Get all devices
 		app.MapGet("/api/device/", GetDevice); //Get a device by its ArdMac
-		app.MapPost("/api/insertDevice", InsertDevice);
-		app.MapPost("/api/deleteDevice", DeleteDevice);
+		app.MapPost("/api/device/insert", InsertDevice);
+		app.MapPut("/api/Device/update", UpdateDevice);
+		app.MapDelete("/api/device/delete", DeleteDevice);
+		
 		//DeviceLog endpoints
 		app.MapGet("/api/deviceLogs", GetDeviceLogs); //Get all device logs
 		app.MapGet("/api/deviceLogs/{ArdMac}", GetLogsByDevice); //Get all device logs by device ArdMac
-		app.MapPost("/api/insertDeviceLog", InsertDeviceLog);
-		app.MapPost("/api/deleteDeviceLog", DeleteDeviceLog);
+		app.MapPost("/api/DeviceLog/insert", InsertDeviceLog);
+		app.MapDelete("/api/DeviceLog/delete", DeleteDeviceLog);
 	}
 
 	//IDeviceData endpoints methodes
