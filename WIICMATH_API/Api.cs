@@ -4,6 +4,7 @@ public static class Api
 {
 	public static void ConfigureAPI(this WebApplication app)
 	{
+		app.UseCors("AllowAll");
 		//All of my Api endpoint mapping
 		//Device endpoints
 		app.MapGet("/api/devices", GetDevices); //Get all devices
